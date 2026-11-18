@@ -478,9 +478,9 @@ def home():
   <div class="gantry" aria-hidden="true"></div>
   <div class="wrap">
     <div class="rig rig--tabs">
-      <div class="exits" role="tablist" aria-label="Featured messages">
+      <div class="exits">
         <button class="exits__pause" type="button" aria-pressed="false" aria-label="Pause rotation">{icon("pause", "i-pause")}{icon("play", "i-play")}</button>
-        {"".join(exits)}
+        <div class="exits__tabs" role="tablist" aria-label="Featured messages">{"".join(exits)}</div>
       </div>
       <div class="sign sign--overhead sign--lit is-swept">
         <div class="legends">{"".join(legends)}</div>
@@ -684,7 +684,7 @@ def services():
         + sign_cta(
             f"Ready to Join {SITE}?",
             f"{TAGLINE}. Experience the difference of working with a team that truly values your success, safety, and satisfaction.",
-            [btn("Get Started Today", "contact-us.html", "white"), btn("Learn More", "why-us.html", "ghost")],
+            [btn("Get Started Today", "contact-us.html", "white"), btn("Why Choose GFS", "why-us.html", "ghost")],
         )
     )
     page("services.html", f"Services — {SITE}", "CDL driver recruiting, owner-operator programs, fleet partnerships, and carrier and logistics services across 48 states.", body, "services.html", cta=False)
